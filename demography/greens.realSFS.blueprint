@@ -1,0 +1,25 @@
+#granulifera blueprint file
+#input setting
+popid: greens # id of the population (no white space)
+nseq: 32 # number of sequences
+L: 7006222 # total number of observed nucleic sites, including polymorphic and monomorphic # taken from angsd log screen
+whether_folded: true # whethr the SFS is folded (true or false)
+SFS: 6270.760038 3676.999101 3611.697929 3064.068970 2891.350205 2303.663818 2283.337700 2419.859764 1851.059758 1965.428562 1878.289478 1973.772224 1972.592468 1903.019753 2181.827435 2048.267296 # snp frequency spectrum: number of singleton, number of doubleton, etc. (separated by white space)
+#smallest_size_of_SFS_bin_used_for_estimation: 1 # default is 1; to ignore singletons, uncomment this line and change this number to 2
+#largest_size_of_SFS_bin_used_for_estimation: 16 # default is nseq/2 for folded SFS
+pct_training: 0.67 # percentage of sites for training
+nrand: 8 10 12 14 16 18 20 22 24 26 28 30 # number of random break points for each try (separated by white space)
+project_dir: greens_realSFS # project directory
+stairway_plot_dir: stairway_plot_es # directory to the stairway plot files
+ninput: 200 # number of input files to be created for each estimation
+#random_seed: 6
+#output setting
+mu: 1e-9 # minimum value from Marquez et al. 2020 (Phyllobates)
+year_per_generation: 2 # assumed generation time (in years)
+#plot setting
+plot_title:  green populations # title of the plot
+xrange: 0.4,10000 # Time (1k year) range; format: xmin,xmax; "0,0" for default
+yrange: 0,0 # Ne (1k individual) range; format: xmin,xmax; "0,0" for default
+xspacing: 4 # X axis spacing
+yspacing: 4 # Y axis spacing
+fontsize: 14 # Font size
